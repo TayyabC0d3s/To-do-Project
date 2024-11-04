@@ -65,17 +65,10 @@ function App() {
     <>
       
       <main style={{display: "flex"}}>
-        <div id="Menu1">
+        {/* <div id="Menu1">
           <Menu />
-        </div>
-
-        <TodoList 
-          todos={todos} 
-          handleDeleteTodo={handleDeleteTodo} 
-          handleEditTodo={handleEditTodo} 
-        />
-
-        <div id="Menu2">
+        </div> */}
+        <div id="Menu">
           <h4>Add a new To-do</h4>
           <TodoInput 
             todoValue={todoValue} 
@@ -84,6 +77,14 @@ function App() {
             tags={tags}
           />
         </div>
+
+        <TodoList 
+          todos={todos} 
+          handleDeleteTodo={handleDeleteTodo} 
+          handleEditTodo={handleEditTodo} 
+        />
+
+        
       </main>
     </>
   )

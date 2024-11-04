@@ -6,23 +6,19 @@ body{
   background: #f7fafc;
 }
  
-#Menu1, #Menu2{
-  width: 50%;
+#Menu{
+  width: 40%;
   padding: 10px;
   margin-right: 15px;
   border-radius: 1rem;
   background: #eaf0f0
 }
 
-#Menu1{
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-}
-
 #TagContainer{
-  border-radius: 1rem;
-  padding: 5px;
+  border-radius: 0.5rem;
+  padding: 2px;
+  font-size: 1rem;
+  font-weight: 600;
   background-color: #f7fafc;
   margin-top: 10px;
 }
@@ -145,3 +141,11 @@ body{
   margin-bottom: auto;
   color:cadetblue;
 }
+
+/* @media screen and (max-width: 860px){
+  #Menu{
+    height: 96vh;
+    position: fixed;
+    left: -50%;
+  }
+} */

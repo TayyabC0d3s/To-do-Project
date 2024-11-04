@@ -21,8 +21,7 @@ function TodoInput(props) {
         />
 
         <div id='TagContainer'>
-          <h5>Tags</h5>
-
+          <p>Tags</p>
           <div id="tags">
             {
               tags.map((tag, index) => (

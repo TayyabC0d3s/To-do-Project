@@ -8,7 +8,7 @@ body{
  
 #Menu{
   width: 40%;
-  padding: 10px;
+  padding: 5px 10px;
   margin-right: 15px;
   border-radius: 1rem;
   background: #eaf0f0
@@ -16,7 +16,7 @@ body{
 
 #TagContainer{
   border-radius: 0.5rem;
-  padding: 2px;
+  padding: 5px 10px;
   font-size: 1rem;
   font-weight: 600;
   background-color: #f7fafc;
@@ -25,6 +25,7 @@ body{
 
 #tags{
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   padding: 5px;
 }
@@ -39,16 +40,20 @@ body{
   text-align: center;
 }
 
+#tags > button:active {
+  background: cadetblue;
+}
+
 
 #input{
-  width: 90%;
+  width: 93%;
   padding: 10px;
   border-radius: 0.75rem;
   outline: 0;
   border: 0.2px solid #282c34
 }
 
-#addButton{
+.addButton{
   /* width: 50%; */
   display: flex;
   align-items: center;
@@ -90,8 +95,9 @@ body{
 .contextMenu{
   align-items: flex-start;
   position: fixed;
+  right: 1rem;
   border-radius: 1rem;
-  padding: 5px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   background-color: #f7fafc;
@@ -103,7 +109,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 97%;
+  width: 100%;
 }
 
 .contextMenu > button:hover {

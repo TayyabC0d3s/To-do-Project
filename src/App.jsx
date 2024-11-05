@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
-import Menu from "./components/Menu"
 
 function App() {
 
@@ -27,6 +26,7 @@ function App() {
       return
     
     let localTodos = localStorage.getItem('todos')
+
     if(!localTodos)
       return
 
@@ -65,9 +65,6 @@ function App() {
     <>
       
       <main style={{display: "flex"}}>
-        {/* <div id="Menu1">
-          <Menu />
-        </div> */}
         <div id="Menu">
           <h4>Add a new To-do</h4>
           <TodoInput 
@@ -75,6 +72,7 @@ function App() {
             setTodoValue={setTodoValue} 
             handleAddTodo={handleAddTodo} 
             tags={tags}
+            setTags={setTags}
           />
         </div>
 

@@ -39,6 +39,9 @@ function TodoInput(props) {
 
   function addTag(newTag)
   {
+    if(newTag === '')
+      return alert("enter a tag")
+
     const newTags = [...tags, tag];
     setTags(newTags)
     PersistData(newTags)
@@ -68,6 +71,7 @@ function TodoInput(props) {
                     cursor: "pointer",
                     display: "flex",
                     alignItems: "center",
+                    justifyContent: "center",
                     gap: "5px"
                   }}
                 >
@@ -82,7 +86,9 @@ function TodoInput(props) {
                     
                     style={{
                       border: 0, 
-                      background: "transparent" 
+                      background: "transparent",
+                      textAlign: "center",
+                      cursor: "pointer"
                     }}
                   >
                     <CiCircleRemove />
@@ -92,8 +98,10 @@ function TodoInput(props) {
             }
           </div>
           <hr />
-          <input type='text' id="tagInput" onChange={(e) => setTag(e.target.value)}/>
-          <button className="addButton" onClick={() => addTag(tag)}>+ Add Tag</button>
+          <div className="tag-input-container">
+            <input type='text' className="tagInput" onChange={(e) => setTag(e.target.value)}/>
+            <button onClick={() => addTag(tag)} className="add-tag-button">+ Add Tag</button>
+          </div>
         </div>
         
         <button 
@@ -104,7 +112,7 @@ function TodoInput(props) {
             setTodoValue({ text: '', date: null, tag: null })
           }}
         >
-          <FaPlus /> Add
+          + Add
         </button>
     </header>
   )

@@ -11,7 +11,8 @@ body{
   padding: 5px 10px;
   margin-right: 15px;
   border-radius: 1rem;
-  background: #eaf0f0
+  background: #eaf0f0;
+  position: relative;
 }
 
 #TagContainer{
@@ -54,16 +55,23 @@ body{
 }
 
 .addButton{
-  /* width: 50%; */
+  right: 100%;
+  margin: 10%;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px;
+  justify-content: center;
+  padding: 10px;
   border-radius: 0.2rem;
   border: 0;
   outline: 0;
   background-color: cadetblue;
   color: #f7fafc;
+  font-size: 1rem;
 }
 
 #addButton:hover{
@@ -119,9 +127,6 @@ body{
 
 #TodoContainer{
   padding: 10px;
-  /* background: #f7fafc; */
-  /* box-shadow: 0 0 15px rgba(40, 44, 52, 0.2); */
-  /* border-radius: 1rem; */
   height: 93vh;
   width: 100%;
   overflow-y: scroll;
@@ -148,6 +153,39 @@ body{
   color:cadetblue;
 }
 
+.tag-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tagInput {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.tagInput:focus {
+  border-color: cadetblue;
+}
+
+.add-tag-button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: cadetblue;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-tag-button:hover {
+  background-color: rgb(41, 68, 69);
+}
 /* @media screen and (max-width: 860px){
   #Menu{
     height: 96vh;
